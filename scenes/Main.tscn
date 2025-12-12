@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3olfa61dvodq"]
+
+[ext_resource type="Script" uid="uid://di6hkx4o2sq2l" path="res://src/Bluetooth/BluetoothLister.cs" id="1_elqb8"]
+
+[node name="BluetoothLister" type="Node"]
+script = ExtResource("1_elqb8")
