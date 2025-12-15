@@ -1,0 +1,153 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxqvd8ymwfx7w"]
+
+[ext_resource type="Script" uid="uid://ved4mweh78q1" path="res://scenes/ui/RowerSimulatorUI.cs" id="1_m3f8s"]
+
+[node name="RowerSimulatorUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m3f8s")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -350.0
+offset_right = 300.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -330.0
+offset_right = 280.0
+offset_bottom = 330.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "FTMS Rower Simulator"
+horizontal_alignment = 1
+
+[node name="HSeparator1" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="CurrentMetricsLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Current Metrics"
+horizontal_alignment = 1
+
+[node name="StrokeRateLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Stroke Rate: 0.0 SPM"
+
+[node name="StrokeCountLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Strokes: 0"
+
+[node name="DistanceLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Distance: 0m (0.00km)"
+
+[node name="PaceLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Pace: 0:00/500m"
+
+[node name="PowerLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Power: 0W"
+
+[node name="HeartRateLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Heart Rate: 0 BPM"
+
+[node name="TimeLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Time: 0:00"
+
+[node name="CaloriesLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Calories: 0 kcal (0 kcal/min)"
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="AverageMetricsLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Average Metrics"
+horizontal_alignment = 1
+
+[node name="AvgStrokeRateLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Avg Stroke Rate: 0.0 SPM"
+
+[node name="AvgPaceLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Avg Pace: 0:00/500m"
+
+[node name="AvgPowerLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Avg Power: 0W"
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ControlsLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Controls"
+horizontal_alignment = 1
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="StartStopButton" type="Button" parent="VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="DecreaseButton" type="Button" parent="VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+text = "Decrease Effort"
+
+[node name="IncreaseButton" type="Button" parent="VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+text = "Increase Effort"
+
+[node name="ResetButton" type="Button" parent="VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+text = "Reset"
+
+[connection signal="pressed" from="VBoxContainer/ButtonsContainer/StartStopButton" to="." method="OnStartStopButtonPressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonsContainer/DecreaseButton" to="." method="OnDecreaseButtonPressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonsContainer/IncreaseButton" to="." method="OnIncreaseButtonPressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonsContainer/ResetButton" to="." method="OnResetButtonPressed"]
