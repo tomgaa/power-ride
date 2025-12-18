@@ -4,7 +4,7 @@ public partial class MainMenu : Control
 {
     [Export] public PackedScene GameScene;
     [Export] public PackedScene ScoreboardScene;
-    [Export] public PackedScene SettingsScene;
+    [Export] public PackedScene OptionsScene;
 
     private AcceptDialog _infoDialog;
 
@@ -13,7 +13,7 @@ public partial class MainMenu : Control
         // Hook up buttons
         GetButton("StartButton").Pressed += OnStartPressed;
         GetButton("ScoreboardButton").Pressed += OnScoreboardPressed;
-        GetButton("SettingsButton").Pressed += OnSettingsPressed;
+        GetButton("OptionsButton").Pressed += OnOptionsPressed;
         GetButton("ExitButton").Pressed += OnExitPressed;
 
         // Lightweight info dialog for placeholders
@@ -52,19 +52,19 @@ public partial class MainMenu : Control
         }
         else
         {
-            ShowInfo("Scoreboard w przygotowaniu.");
+            ShowInfo("Scoreboard coming soon."); 
         }
     }
 
-    private void OnSettingsPressed()
+    private void OnOptionsPressed()
     {
-        if (SettingsScene != null)
+        if (OptionsScene != null)
         {
-            GetTree().ChangeSceneToPacked(SettingsScene);
+            GetTree().ChangeSceneToPacked(OptionsScene);
         }
         else
         {
-            ShowInfo("Ustawienia w przygotowaniu.");
+            ShowInfo("Options coming soon.");
         }
     }
 
