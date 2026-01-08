@@ -76,17 +76,17 @@ public partial class Game : Node3D
 		
 		// Update display
 		string displayText = $@"Stroke Rate: {strokeRate:F1} SPM
-Power: {instantaneousPower}W
-Pace: {paceStr}
-Speed: {speedKmh:F1} km/h
-Heart Rate: {heartRate} BPM
-Time: {timeStr}
-Distance: {distanceStr}
-Strokes: {strokeCount}
-Calories: {totalEnergy} kcal
-Avg SR: {averageStrokeRate:F1} SPM
-Avg Power: {averagePower}W
-Avg Pace: {avgPaceStr}";
+        Power: {instantaneousPower}W
+        Pace: {paceStr}
+        Speed: {speedKmh:F1} km/h
+        Heart Rate: {heartRate} BPM
+        Time: {timeStr}
+        Distance: {distanceStr}
+        Strokes: {strokeCount}
+        Calories: {totalEnergy} kcal
+        Avg SR: {averageStrokeRate:F1} SPM
+        Avg Power: {averagePower}W
+        Avg Pace: {avgPaceStr}";
 		
 		dataDisplayLabel.Text = displayText;
 	}
