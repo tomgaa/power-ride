@@ -1,16 +1,85 @@
-[gd_scene load_steps=4 format=3 uid="uid://deeua6j1pd0o7"]
+[gd_scene load_steps=9 format=3 uid="uid://deeua6j1pd0o7"]
 
-[ext_resource type="PackedScene" uid="uid://c63bru102n4vd" path="res://assets/EnvironomentPackV_2/BushBlueFlowers.fbx" id="1_cyomv"]
-[ext_resource type="PackedScene" uid="uid://dm2kcdj15aa00" path="res://assets/EnvironomentPackV_2/BushFruitsBlue.fbx" id="2_4sl6a"]
-[ext_resource type="PackedScene" uid="uid://cdkhw14574m3o" path="res://assets/EnvironomentPackV_2/StrawberryPlant_Stage_03.fbx" id="3_w5are"]
+[ext_resource type="PackedScene" uid="uid://bmuut7mds2xow" path="res://assets/RaceTracksKit/FBX/CurvedTrack01.fbx" id="1_vxtud"]
+[ext_resource type="PackedScene" uid="uid://b8uglw0okf0s7" path="res://assets/RaceTracksKit/FBX/C_CurvedTrack01.fbx" id="2_ttilx"]
+[ext_resource type="PackedScene" uid="uid://trtp6q6w74sf" path="res://assets/RaceTracksKit/FBX/BeginTrack01.fbx" id="3_ihjiq"]
+[ext_resource type="PackedScene" uid="uid://7kfwy2acxgsm" path="res://assets/RaceTracksKit/FBX/Ramp1.fbx" id="4_d7kjg"]
+[ext_resource type="PackedScene" uid="uid://ccbipeoyn03y6" path="res://assets/RaceTracksKit/FBX/StraightTrack01.fbx" id="5_0lsax"]
+[ext_resource type="PackedScene" uid="uid://dbrmk68p5ugl7" path="res://assets/Bicycle/bike.glb" id="6_r1qfb"]
+[ext_resource type="PackedScene" uid="uid://ba3cw4baou5s" path="res://assets/RaceTracksKit/FBX/BeginFlag.fbx" id="7_xjhdj"]
+[ext_resource type="PackedScene" uid="uid://n81p2d68f6rc" path="res://assets/Character/StylizedCharacter.glb" id="8_ttilx"]
 
 [node name="GreatLoop" type="Node3D"]
 
-[node name="BushBlueFlowers" parent="." instance=ExtResource("1_cyomv")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 4.3696113, 0, -2.0064306)
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.35836795, 0, -0.93358046, 0, 1, 0, 0.93358046, 0, -0.35836795, -14.750874, 3.661334, -2.5117626)
+fov = 73.3
 
-[node name="BushFruitsBlue" parent="." instance=ExtResource("2_4sl6a")]
-transform = Transform3D(0.23, 0, 0, 0, 0.23, 0, 0, 0, 0.23, -2.2336679, 0, -4.9319983)
+[node name="CurvedTrack02" parent="." instance=ExtResource("1_vxtud")]
+transform = Transform3D(-0.99904823, 0, 0.04361929, 0, 1, 0, -0.04361929, 0, -0.99904823, -72.47621, 0, -58.46679)
 
-[node name="StrawberryPlant_Stage_03" parent="." instance=ExtResource("3_w5are")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 5.879246, 0, 4.217856)
+[node name="C_CurvedTrack01" parent="." instance=ExtResource("2_ttilx")]
+transform = Transform3D(0.9698523, 0, -0.017452404, 0, 1, 0, 0.016928833, 0, 0.9998477, -128.18924, 0, -23.148924)
+
+[node name="CurvedTrack01" parent="." instance=ExtResource("1_vxtud")]
+transform = Transform3D(0.9998477, 0, 0.017452406, 0, 1, 0, -0.017452406, 0, 0.9998477, -54.644432, 0, -119.12121)
+
+[node name="CurvedTrack03" parent="." instance=ExtResource("1_vxtud")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 109.55226, 0, -121.00024)
+
+[node name="CurvedTrack04" parent="." instance=ExtResource("1_vxtud")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 111.13378, 0, -7.4572754)
+
+[node name="BeginTrack01" parent="." instance=ExtResource("3_ihjiq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.134211, 0, 2.6534882)
+
+[node name="BeginTrack02" parent="." instance=ExtResource("3_ihjiq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.134211, 0, 2.6534882)
+
+[node name="Ramp1" parent="." instance=ExtResource("4_d7kjg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.257748, 0, 2.727601)
+
+[node name="StraightTrack01" parent="." instance=ExtResource("5_0lsax")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.918133, 0, -129.54634)
+
+[node name="StraightTrack02" parent="." instance=ExtResource("5_0lsax")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.707409, 0, -129.54634)
+
+[node name="StraightTrack03" parent="." instance=ExtResource("5_0lsax")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.650753, 0, -129.54634)
+
+[node name="StraightTrack04" parent="." instance=ExtResource("5_0lsax")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67.53592, 0, -129.54634)
+
+[node name="StraightTrack05" parent="." instance=ExtResource("5_0lsax")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 119.64261, 0, -78.5928)
+
+[node name="StraightTrack06" parent="." instance=ExtResource("5_0lsax")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 119.64261, 0, -51.59694)
+
+[node name="StraightTrack07" parent="." instance=ExtResource("5_0lsax")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.820984, 0, 2.6303692)
+
+[node name="StraightTrack08" parent="." instance=ExtResource("5_0lsax")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.796036, 0, 2.6303692)
+
+[node name="StraightTrack09" parent="." instance=ExtResource("5_0lsax")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.791931, 0, 2.6303692)
+
+[node name="StraightTrack10" parent="." instance=ExtResource("5_0lsax")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.05841, 0, 2.6303692)
+
+[node name="bike" parent="." instance=ExtResource("6_r1qfb")]
+transform = Transform3D(-1.25, 0, -1.8874475e-07, 0, 1.25, 0, 1.8874475e-07, 0, -1.25, -5.3868494, -0.29447842, 0)
+
+[node name="StraightTrack11" parent="." instance=ExtResource("5_0lsax")]
+transform = Transform3D(0.99965733, 0, 0.02617695, 0, 1, 0, -0.02617695, 0, 0.99965733, -65.6445, 0, 2.8989062)
+
+[node name="StraightTrack12" parent="." instance=ExtResource("5_0lsax")]
+transform = Transform3D(0.9986295, 0, 0.05233596, 0, 1, 0, -0.05233596, 0, 0.9986295, -92.4353, 0, 3.829486)
+
+[node name="BeginFlag" parent="." instance=ExtResource("7_xjhdj")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -12.179218, 14.75227, 2.5017834)
+
+[node name="StylizedCharacter" parent="." instance=ExtResource("8_ttilx")]
+transform = Transform3D(-1.3113417e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.3113417e-08, -4.2510777, 2.9430838, 0)
