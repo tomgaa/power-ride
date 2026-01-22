@@ -28,6 +28,7 @@ public partial class MainMenu : Control
 		// Provide sensible defaults so it works out of the box
 		GameScene ??= GD.Load<PackedScene>("res://scenes/ui/RowerSimulatorUI.tscn");
 		TestScene ??= GD.Load<PackedScene>("res://scenes/game/game_scene.tscn");
+		GameScene ??= GD.Load<PackedScene>("res://scenes/ui/Game.tscn");
 	}
 
 	private Button GetButton(string name)
