@@ -86,7 +86,7 @@ public partial class Game : Node3D
         Calories: {totalEnergy} kcal
         Avg SR: {averageStrokeRate:F1} SPM
         Avg Power: {averagePower}W
-        Avg Pace: {avgPaceStr}";
+		Avg Pace: {avgPaceStr}";
 		
 		dataDisplayLabel.Text = displayText;
 	}

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cteckpje65cus"
-path.s3tc="res://.godot/imported/CheckerboardStart.png-6bfa3a64ded69d6a63f7022473c9d8d1.s3tc.ctex"
+path.s3tc="res://.godot/imported/CheckerboardStart.png-9a45cc1add6f894053fe98bb464494b7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/RaceTracksKit/textures/CheckerboardStart.png"
-dest_files=["res://.godot/imported/CheckerboardStart.png-6bfa3a64ded69d6a63f7022473c9d8d1.s3tc.ctex"]
+source_file="res://assets/RaceTracksKit/Textures/CheckerboardStart.png"
+dest_files=["res://.godot/imported/CheckerboardStart.png-9a45cc1add6f894053fe98bb464494b7.s3tc.ctex"]
 
 [params]
 
