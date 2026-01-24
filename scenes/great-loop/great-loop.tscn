@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://deeua6j1pd0o7"]
+[gd_scene load_steps=12 format=3 uid="uid://deeua6j1pd0o7"]
 
 [ext_resource type="PackedScene" uid="uid://bmuut7mds2xow" path="res://assets/RaceTracksKit/FBX/CurvedTrack01.fbx" id="1_vxtud"]
 [ext_resource type="PackedScene" uid="uid://b8uglw0okf0s7" path="res://assets/RaceTracksKit/FBX/C_CurvedTrack01.fbx" id="2_ttilx"]
@@ -6,9 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://7kfwy2acxgsm" path="res://assets/RaceTracksKit/FBX/Ramp1.fbx" id="4_d7kjg"]
 [ext_resource type="PackedScene" uid="uid://ccbipeoyn03y6" path="res://assets/RaceTracksKit/FBX/StraightTrack01.fbx" id="5_0lsax"]
 [ext_resource type="PackedScene" uid="uid://ba3cw4baou5s" path="res://assets/RaceTracksKit/FBX/BeginFlag.fbx" id="7_xjhdj"]
+[ext_resource type="PackedScene" path="res://scenes/great-loop/GuyOnBicycleCharacter.tscn" id="8_ttilx"]
 [ext_resource type="Script" uid="uid://dit88xgcpv5sc" path="res://scenes/ui/Game.cs" id="9_game"]
-[ext_resource type="PackedScene" uid="uid://cyjdurg34is8x" path="res://scenes/great-loop/MovableCharacter.tscn" id="10_d7kjg"]
-[ext_resource type="Script" uid="uid://ca1cu1w7tswhx" path="res://scenes/great-loop/MovableCharacter.cs" id="11_0lsax"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0lsax"]
 
@@ -133,6 +132,5 @@ mesh = SubResource("BoxMesh_d7kjg")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.434296, -0.4995, -83.01346)
 shape = SubResource("BoxShape3D_r1qfb")
 
-[node name="MovableCharacter" parent="." instance=ExtResource("10_d7kjg")]
-transform = Transform3D(-0.06975648, 0, -0.9975641, 0, 1, 0, 0.9975641, 0, -0.06975648, 6.13465, 2.1427765, -2.8874645)
-script = ExtResource("11_0lsax")
+[node name="GuyOnBicycleCharacter" parent="." instance=ExtResource("8_ttilx")]
+transform = Transform3D(-0.037911892, 0, -0.45471665, 0, 0.45629436, 0, 0.45471665, 0, -0.037911892, -1.9035759, 4.0872235, 1.7021446)
