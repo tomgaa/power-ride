@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cdj3orcsb5xbw"
-path.s3tc="res://.godot/imported/StartFinishFlags.png-b21be7931f85e5b3f68b3c320c0d8349.s3tc.ctex"
+path.s3tc="res://.godot/imported/StartFinishFlags.png-4b09105e776a6f44deb4c25716b258d4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/RaceTracksKit/textures/StartFinishFlags.png"
-dest_files=["res://.godot/imported/StartFinishFlags.png-b21be7931f85e5b3f68b3c320c0d8349.s3tc.ctex"]
+source_file="res://assets/RaceTracksKit/Textures/StartFinishFlags.png"
+dest_files=["res://.godot/imported/StartFinishFlags.png-4b09105e776a6f44deb4c25716b258d4.s3tc.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://deeua6j1pd0o7"]
+[gd_scene load_steps=10 format=3 uid="uid://deeua6j1pd0o7"]
 
 [ext_resource type="PackedScene" uid="uid://bmuut7mds2xow" path="res://assets/RaceTracksKit/FBX/CurvedTrack01.fbx" id="1_vxtud"]
 [ext_resource type="PackedScene" uid="uid://b8uglw0okf0s7" path="res://assets/RaceTracksKit/FBX/C_CurvedTrack01.fbx" id="2_ttilx"]
@@ -8,8 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://dbrmk68p5ugl7" path="res://assets/Bicycle/bike.glb" id="6_r1qfb"]
 [ext_resource type="PackedScene" uid="uid://ba3cw4baou5s" path="res://assets/RaceTracksKit/FBX/BeginFlag.fbx" id="7_xjhdj"]
 [ext_resource type="PackedScene" uid="uid://n81p2d68f6rc" path="res://assets/Character/StylizedCharacter.glb" id="8_ttilx"]
+[ext_resource type="Script" path="res://scenes/ui/Game.cs" id="9_game"]
 
 [node name="GreatLoop" type="Node3D"]
+script = ExtResource("9_game")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.35836795, 0, -0.93358046, 0, 1, 0, 0.93358046, 0, -0.35836795, -14.750874, 3.661334, -2.5117626)
@@ -83,3 +85,43 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -12.
 
 [node name="StylizedCharacter" parent="." instance=ExtResource("8_ttilx")]
 transform = Transform3D(-1.3113417e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.3113417e-08, -4.2510777, 2.9430838, 0)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="UI"]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 420.0
+offset_bottom = 70.0
+
+[node name="StartStopButton" type="Button" parent="UI/ButtonsContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="IncreaseButton" type="Button" parent="UI/ButtonsContainer"]
+layout_mode = 2
+text = "Increase"
+
+[node name="DecreaseButton" type="Button" parent="UI/ButtonsContainer"]
+layout_mode = 2
+text = "Decrease"
+
+[node name="ResetButton" type="Button" parent="UI/ButtonsContainer"]
+layout_mode = 2
+text = "Reset"
+
+[node name="DataDisplayLabel" type="Label" parent="UI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -320.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 420.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 12
+text = "Waiting for data..."

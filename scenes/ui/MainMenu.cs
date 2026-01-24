@@ -26,9 +26,8 @@ public partial class MainMenu : Control
 		AddChild(_infoDialog);
 
 		// Provide sensible defaults so it works out of the box
-		GameScene ??= GD.Load<PackedScene>("res://scenes/ui/RowerSimulatorUI.tscn");
 		TestScene ??= GD.Load<PackedScene>("res://scenes/game/game_scene.tscn");
-		GameScene ??= GD.Load<PackedScene>("res://scenes/ui/Game.tscn");
+		GameScene ??= GD.Load<PackedScene>("res://scenes/great-loop/great-loop.tscn");
 	}
 
 	private Button GetButton(string name)
