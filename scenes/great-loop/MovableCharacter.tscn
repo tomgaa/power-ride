@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyjdurg34is8x"]
+
+[ext_resource type="PackedScene" uid="uid://n81p2d68f6rc" path="res://assets/Character/StylizedCharacter.glb" id="1_va5fc"]
+[ext_resource type="PackedScene" uid="uid://dbrmk68p5ugl7" path="res://assets/Bicycle/bike.glb" id="2_2g82b"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_va5fc"]
+height = 6.9462433
+
+[node name="MovableCharacter" type="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.165691, -0.3515854, 6.693977)
+shape = SubResource("CapsuleShape3D_va5fc")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="StylizedCharacter" parent="Node3D" instance=ExtResource("1_va5fc")]
+transform = Transform3D(0.29, 0, 0, 0, 0.29, 0, 0, 0, 0.29, 6.773197, 0, 10.008014)
+
+[node name="bike" parent="Node3D" instance=ExtResource("2_2g82b")]
+transform = Transform3D(-4.5241286e-08, 0, -1.035, 0, 1.035, 0, 1.035, 0, -4.5241286e-08, 6.776798, -2.4302907, 10.811325)
+
+[node name="Node3D2" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Node3D2"]
+transform = Transform3D(-0.9981348, 0.011753193, -0.059906527, 0, 0.98129267, 0.19252196, 0.061048582, 0.19216287, -0.9794623, 6.599, 5.59, 0.69)
