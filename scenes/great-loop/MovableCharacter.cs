@@ -3,7 +3,7 @@ using System;
 
 public partial class MovableCharacter : CharacterBody3D
 {
-	public const float Speed = 20.0f;
+	public const float Speed = 50.0f;
 	public const float JumpVelocity = 4.5f;
 
 	public override void _PhysicsProcess(double delta)

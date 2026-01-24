@@ -3,7 +3,7 @@ using System;
 
 public partial class GuyOnBicycleCharacter : CharacterBody3D
 {
-	public const float Speed = 20.0f;
+	public const float Speed = 40.0f;
 	public const float JumpVelocity = 4.5f;
 	public const float RotationSpeed = 5.0f; // Speed of rotation interpolation
 	public const float MinVelocityForRotation = 0.1f; // Minimum velocity to trigger rotation
@@ -11,7 +11,7 @@ public partial class GuyOnBicycleCharacter : CharacterBody3D
 	public const float BankingSpeed = 8.0f; // Speed of banking interpolation
 
 	// Camera settings
-	public const float CameraDistance = 8.0f; // Distance behind character
+	public const float CameraDistance = 12.0f; // Distance behind character
 	public const float CameraHeight = 4.0f; // Height above character
 	public const float CameraLookAhead = 2.0f; // How far ahead camera looks
 
