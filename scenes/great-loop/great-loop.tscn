@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://deeua6j1pd0o7"]
+[gd_scene load_steps=15 format=3 uid="uid://deeua6j1pd0o7"]
 
 [ext_resource type="PackedScene" uid="uid://bmuut7mds2xow" path="res://assets/RaceTracksKit/FBX/CurvedTrack01.fbx" id="1_vxtud"]
 [ext_resource type="PackedScene" uid="uid://b8uglw0okf0s7" path="res://assets/RaceTracksKit/FBX/C_CurvedTrack01.fbx" id="2_ttilx"]
@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://7kfwy2acxgsm" path="res://assets/RaceTracksKit/FBX/Ramp1.fbx" id="4_d7kjg"]
 [ext_resource type="PackedScene" uid="uid://ccbipeoyn03y6" path="res://assets/RaceTracksKit/FBX/StraightTrack01.fbx" id="5_0lsax"]
 [ext_resource type="PackedScene" uid="uid://ba3cw4baou5s" path="res://assets/RaceTracksKit/FBX/BeginFlag.fbx" id="7_xjhdj"]
-[ext_resource type="PackedScene" path="res://scenes/great-loop/GuyOnBicycleCharacter.tscn" id="8_ttilx"]
+[ext_resource type="PackedScene" uid="uid://bq8x3k2nap4n5" path="res://scenes/great-loop/GuyOnBicycleCharacter.tscn" id="8_ttilx"]
 [ext_resource type="Script" uid="uid://dit88xgcpv5sc" path="res://scenes/ui/Game.cs" id="9_game"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0lsax"]
@@ -15,6 +15,31 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_r1qfb"]
 size = Vector3(325.7691, 0.001, 231.64832)
+
+[sub_resource type="Sky" id="Sky_1"]
+sky_horizon_color = Color(0.95, 0.95, 0.97, 1)
+sky_top_color = Color(0.4, 0.6, 0.8, 1)
+ground_horizon_color = Color(0.7, 0.6, 0.5, 1)
+ground_bottom_color = Color(0.3, 0.3, 0.35, 1)
+sun_angle_min = 10.0
+sun_curve = 0.5
+ground_curve = 0.3
+
+[sub_resource type="Environment" id="Environment_1"]
+background_mode = 1
+sky = SubResource("Sky_1")
+ambient_light_source = 2
+ambient_light_color = Color(0.5, 0.6, 0.7, 1)
+ambient_light_energy = 0.3
+tonemap_mode = 2
+tonemap_white = 1.5
+glow_enabled = true
+glow_levels/1 = 0.5
+glow_levels/2 = 0.3
+glow_levels/3 = 0.2
+glow_levels/4 = 0.1
+glow_normalized = true
+glow_intensity = 0.8
 
 [node name="GreatLoop" type="Node3D"]
 script = ExtResource("9_game")
@@ -133,4 +158,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.434296, -0.4995, -83.0134
 shape = SubResource("BoxShape3D_r1qfb")
 
 [node name="GuyOnBicycleCharacter" parent="." instance=ExtResource("8_ttilx")]
-transform = Transform3D(-0.037911892, 0, -0.45471665, 0, 0.45629436, 0, 0.45471665, 0, -0.037911892, -1.9035759, 4.0872235, 1.7021446)
+transform = Transform3D(-0.037911892, 0, -0.45471665, 0, 0.45629436, 0, 0.45471665, 0, -0.037911892, -1.9035759, 4.8839164, 1.7021446)
+
+[node name="Lighting" type="Node3D" parent="."]
+
+[node name="Sun" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(0.8660254, -0.4330127, 0.25, 0, 0.5, 0.8660254, -0.5, -0.75, 0.4330127, 0, 20, 0)
+light_color = Color(1, 0.98, 0.95, 1)
+shadow_enabled = true
+directional_shadow_mode = 1
+directional_shadow_max_distance = 100.0
+
+[node name="FillLight" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(-0.7071068, -0.3535534, -0.6123724, 0, 0.8660254, -0.5, 0.7071068, -0.3535534, -0.6123724, 0, 15, 0)
+light_color = Color(0.8, 0.85, 1, 1)
+light_energy = 0.4
+shadow_enabled = false
+
+[node name="AmbientLight" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 30, 0)
+light_color = Color(0.9, 0.95, 1, 1)
+light_energy = 0.5
+omni_range = 200.0
+shadow_enabled = false
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1")

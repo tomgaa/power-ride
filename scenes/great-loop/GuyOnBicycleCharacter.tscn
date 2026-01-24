@@ -1,16 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://bq8x3k2nap4n5"]
+[gd_scene load_steps=4 format=3 uid="uid://bq8x3k2nap4n5"]
 
 [ext_resource type="PackedScene" uid="uid://b8qn8k7nnp24w" path="res://assets/GuyOnBicycle.glb" id="1_guyonbike"]
-[ext_resource type="Script" path="res://scenes/great-loop/GuyOnBicycleCharacter.cs" id="2_script"]
+[ext_resource type="Script" uid="uid://con7v635ihvoa" path="res://scenes/great-loop/GuyOnBicycleCharacter.cs" id="2_script"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1"]
-radius = 0.5
-height = 1.8
+radius = 0.9609375
+height = 1.9423828
 
 [node name="GuyOnBicycleCharacter" type="CharacterBody3D"]
 script = ExtResource("2_script")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 1.1092348, 0)
 shape = SubResource("CapsuleShape3D_1")
 
 [node name="Model" type="Node3D" parent="."]
